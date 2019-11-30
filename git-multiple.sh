@@ -29,9 +29,7 @@ add()
 execute() 
 {
     filename=$git_multiple_path/$1
-    echo $filename
     while read line; do
-        echo $2
         cd $line
         $2
         cd -
@@ -46,7 +44,7 @@ list
 elif [[ $1 == "add" ]]; then 
 add $2 $3
 elif [[ $1 == "exec" ]]; then 
-execute $2 $3
+execute $2 "$3"
 else
 echo "invalid command"
 fi

@@ -29,9 +29,11 @@ add()
 execute() 
 {
     filename=$git_multiple_path/$1
+    echo $filename
     while read line; do
+        echo $2
         cd $line
-        $3
+        $2
         cd -
     done < $filename
 }

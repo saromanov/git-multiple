@@ -4,6 +4,7 @@ git_multiple_path=$HOME/.config/gitmultiple
 init()
 {
     mkdir $git_multiple_path
+    echo "config file is initialized at $git_multiple_path"
 }
 
 new() 

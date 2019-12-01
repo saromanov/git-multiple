@@ -46,6 +46,21 @@ execute()
         cd -
     done < $filename
 }
+
+info()
+{
+    echo "List of commands:"
+    echo "git-multiple init - Initialization of the project at the $HOME/.config file"
+    echo ""
+    echo "git-multiple new <name> - Creating of teh new project"
+    echo ""
+    echo "git-multiple ls - List of the projects"
+    echo ""
+    echo "git-multiple add <project name> <path> - Adding path to project"
+    echo ""
+    echo "git-multiple exec <project name> <git command> - Executing of the git command"
+}
+
 if [[ $1 == "init" ]]; then
 init
 elif [[ $1 == "new" ]]; then
@@ -57,5 +72,5 @@ add $2 $3
 elif [[ $1 == "exec" ]]; then 
 execute $2 "$3"
 else
-echo "invalid command"
+info
 fi

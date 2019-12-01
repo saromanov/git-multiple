@@ -13,11 +13,13 @@ new()
 
 list() 
 {
+    exist_config
     ls -lA $git_multiple_path | awk -F':[0-9]* ' '/:/{print $2}'
 }
 
 add() 
 {
+    exist_config
     filename=$git_multiple_path/$1
     if [ -f "$filename" ]; then
         echo $2 >> $filename
@@ -26,8 +28,16 @@ add()
     fi
 }
 
+exist_config()
+{
+    if [ ! -d "$git_multiple_path" ]; then
+        echo "Config file is not initialized"
+    fi
+}
+
 execute() 
 {
+    exist_config
     filename=$git_multiple_path/$1
     while read line; do
         cd $line

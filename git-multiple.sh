@@ -55,7 +55,7 @@ info()
     echo "List of commands:"
     echo "git-multiple init - Initialization of the project at the $HOME/.config file"
     echo ""
-    echo "git-multiple new <name> - Creating of teh new project"
+    echo "git-multiple new <name> - Creating of the new project"
     echo ""
     echo "git-multiple ls - List of the projects"
     echo ""

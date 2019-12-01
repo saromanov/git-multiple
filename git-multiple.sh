@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git_multiple_path=$HOME/gitmultiple
+git_multiple_path=$HOME/.config/gitmultiple
 init()
 {
     mkdir $git_multiple_path

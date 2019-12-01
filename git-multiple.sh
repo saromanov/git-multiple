@@ -39,6 +39,9 @@ exist_config()
 execute() 
 {
     exist_config
+    if [[ ! $2 == git* ]]; then
+        echo "command not starting with git"
+    fi
     filename=$git_multiple_path/$1
     while read line; do
         cd $line
